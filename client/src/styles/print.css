@@ -1,0 +1,81 @@
+@media print {
+  /* Hide interactive chrome and extraneous layout elements */
+  nav,
+  header,
+  footer,
+  aside,
+  .no-print,
+  .mobile-bottom-nav,
+  .chat-panel-container,
+  button,
+  .toast-container {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .print-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 10mm !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Page break rules */
+  .page-break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .page-break-before {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  h1, h2, h3, h4 {
+    color: #000000 !important;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Ensure card borders and table borders are clearly legible */
+  .card, .border {
+    border: 1px solid #d1d5db !important;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+  }
+
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  th, td {
+    border: 1px solid #e5e7eb !important;
+    padding: 6px 8px !important;
+  }
+
+  /* Expand all collapsed accordions in print */
+  details[open] summary ~ * {
+    display: block !important;
+  }
+
+  details summary {
+    display: none !important;
+  }
+
+  /* Show hyperlinks target text if useful or clean */
+  a {
+    color: #000000 !important;
+    text-decoration: underline !important;
+  }
+}

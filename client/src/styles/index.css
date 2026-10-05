@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    @apply outline-none ring-2 ring-emerald-600 ring-offset-2;
+  }
+
+  /* Farmer Simple Mode: larger text, higher contrast, generous spacing */
+  .simple-mode {
+    font-size: 19px;
+    line-height: 1.6;
+  }
+
+  .simple-mode h1 {
+    font-size: 2.2rem;
+    line-height: 1.25;
+  }
+
+  .simple-mode h2 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .simple-mode h3 {
+    font-size: 1.4rem;
+    line-height: 1.35;
+  }
+
+  .simple-mode p,
+  .simple-mode span,
+  .simple-mode label {
+    font-size: 1.15rem;
+  }
+
+  .simple-mode button,
+  .simple-mode a,
+  .simple-mode input,
+  .simple-mode select,
+  .simple-mode textarea {
+    min-height: 52px;
+    font-size: 1.15rem;
+  }
+
+  /* Ensure touch targets meet minimum 44px */
+  button,
+  [role="button"],
+  input,
+  select,
+  a {
+    touch-action: manipulation;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
