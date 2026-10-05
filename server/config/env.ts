@@ -14,6 +14,7 @@ const envSchema = z.object({
     .string()
     .optional()
     .transform(val => val === 'true'),
+  SUPABASE_URL: z.string().optional(),
 
   JWT_SECRET: z.string().min(32, 'JWT_SECRET must be at least 32 characters long for security'),
   JWT_EXPIRES_IN: z.string().default('7d'),
